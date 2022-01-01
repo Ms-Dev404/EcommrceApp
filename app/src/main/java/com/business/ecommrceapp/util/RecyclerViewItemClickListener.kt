@@ -1,4 +1,4 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.util
 
 interface RecyclerViewItemClickListener {
 

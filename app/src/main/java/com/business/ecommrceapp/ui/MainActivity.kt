@@ -2,32 +2,34 @@ package com.business.ecommrceapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.business.ecommrceapp.*
-import com.business.ecommrceapp.MyApplication.Companion.apiService
+import com.business.ecommrceapp.util.MyApplication.Companion.apiService
 import com.business.ecommrceapp.databinding.ActivityMainBinding
+import com.business.ecommrceapp.adapter.CategoryRecyclerViewAdapter
+import com.business.ecommrceapp.adapter.LoadingStateAdapter
+import com.business.ecommrceapp.adapter.ProductsAdapter
+import com.business.ecommrceapp.util.DataFetchState
+import com.business.ecommrceapp.util.Info
 import com.business.ecommrceapp.viewModel.MainViewModel
 import com.business.ecommrceapp.viewModel.ViewModelFactory
+import com.business.ecommrceapp.models.CategoryItem
+import com.business.ecommrceapp.models.SubCategoryItem
+import com.business.ecommrceapp.util.RecyclerViewItemClickListener
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collect
 
-class MainActivity : AppCompatActivity(),RecyclerViewItemClickListener {
+class MainActivity : AppCompatActivity(), RecyclerViewItemClickListener {
     private var viewBinding:ActivityMainBinding?=null
     private lateinit var viewModel:MainViewModel
-    private lateinit var categoryRecyclerViewAdapter:CategoryRecyclerViewAdapter<CategoryItem>
+    private lateinit var categoryRecyclerViewAdapter: CategoryRecyclerViewAdapter<CategoryItem>
     private lateinit var subCategoryRecyclerViewAdapter: CategoryRecyclerViewAdapter<SubCategoryItem>
     private val categoryList=ArrayList<CategoryItem>()
     private val subCategoryList=ArrayList<SubCategoryItem>()
-    private val productAdapter=ProductsAdapter()
+    private val productAdapter= ProductsAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -162,7 +164,7 @@ class MainActivity : AppCompatActivity(),RecyclerViewItemClickListener {
 
                     is DataFetchState.Failure->{
 
-                        if(fetched.info==Info.ERROR){
+                        if(fetched.info== Info.ERROR){
 
                             Toast.makeText(this,fetched.e.localizedMessage,Toast.LENGTH_SHORT).show()
                         }

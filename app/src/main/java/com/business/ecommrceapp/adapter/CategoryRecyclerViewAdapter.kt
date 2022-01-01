@@ -1,12 +1,15 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.business.ecommrceapp.util.RecyclerViewItemClickListener
 import com.business.ecommrceapp.databinding.CategoryRowBinding
+import com.business.ecommrceapp.models.CategoryItem
+import com.business.ecommrceapp.models.SubCategoryItem
 
-class CategoryRecyclerViewAdapter<out T>(private val categoryList:List<T>, private val itemClickListener:RecyclerViewItemClickListener): RecyclerView.Adapter<CategoryRecyclerViewAdapter<T>.VH>() {
+class CategoryRecyclerViewAdapter<out T>(private val categoryList:List<T>, private val itemClickListener: RecyclerViewItemClickListener): RecyclerView.Adapter<CategoryRecyclerViewAdapter<T>.VH>() {
     var selected=-1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
 
@@ -45,7 +48,7 @@ class CategoryRecyclerViewAdapter<out T>(private val categoryList:List<T>, priva
                     tvCategory.setTextColor(Color.BLACK)
                 }
 
-                if(category is CategoryItem ) {
+                if(category is CategoryItem) {
 
                     tvCategory.text = category.catName.lowercase()
 

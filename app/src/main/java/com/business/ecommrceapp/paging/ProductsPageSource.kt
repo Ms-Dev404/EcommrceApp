@@ -1,9 +1,10 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.paging
 
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.business.ecommrceapp.network.ApiService
+import com.business.ecommrceapp.models.Products
 
 class ProductsPageSource(private val apiService:ApiService,val categoryId:Int): PagingSource<Int, Products>() {
 

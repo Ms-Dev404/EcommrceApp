@@ -1,11 +1,11 @@
 package com.business.ecommrceapp.network
 
-import com.business.ecommrceapp.CategoryItem
-import com.business.ecommrceapp.Products
-import com.business.ecommrceapp.SubCategoryItem
-import com.business.ecommrceapp.UrlRepo
-import com.business.ecommrceapp.UrlRepo.PRODUCTS
-import com.business.ecommrceapp.UrlRepo.SUB_CATEGORIES
+import com.business.ecommrceapp.util.UrlRepo
+import com.business.ecommrceapp.models.CategoryItem
+import com.business.ecommrceapp.models.Products
+import com.business.ecommrceapp.models.SubCategoryItem
+import com.business.ecommrceapp.util.UrlRepo.PRODUCTS
+import com.business.ecommrceapp.util.UrlRepo.SUB_CATEGORIES
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

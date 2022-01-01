@@ -1,6 +1,7 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.util
 
 import android.app.Application
+import com.business.ecommrceapp.RetrofitClient
 import com.business.ecommrceapp.network.ApiService
 
 class MyApplication:Application() {
@@ -13,7 +14,7 @@ class MyApplication:Application() {
     override fun onCreate() {
         super.onCreate()
 
-        apiService= apiService?:RetrofitClient().initRetrofit().create(ApiService::class.java)
+        apiService = apiService ?: RetrofitClient().initRetrofit().create(ApiService::class.java)
     }
 
 

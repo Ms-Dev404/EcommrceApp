@@ -1,15 +1,15 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.DifferCallback
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.business.ecommrceapp.ProductsAdapter.*
-import com.business.ecommrceapp.UrlRepo.IMAGE_URL
+import com.business.ecommrceapp.adapter.ProductsAdapter.*
+import com.business.ecommrceapp.util.UrlRepo.IMAGE_URL
 import com.business.ecommrceapp.databinding.ProductRowBinding
+import com.business.ecommrceapp.models.Products
 
 class ProductsAdapter:PagingDataAdapter<Products, VH>(DataComparator) {
 

@@ -2,7 +2,6 @@ package com.business.ecommrceapp.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.business.ecommrceapp.MyApplication.Companion.apiService
 import com.business.ecommrceapp.network.ApiService
 
 class ViewModelFactory(private val apiService: ApiService): ViewModelProvider.Factory {

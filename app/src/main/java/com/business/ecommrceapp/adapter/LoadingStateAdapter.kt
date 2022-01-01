@@ -1,4 +1,4 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

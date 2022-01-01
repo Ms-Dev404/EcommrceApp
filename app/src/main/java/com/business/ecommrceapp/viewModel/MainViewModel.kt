@@ -1,18 +1,18 @@
 package com.business.ecommrceapp.viewModel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.business.ecommrceapp.*
 import com.business.ecommrceapp.network.ApiService
+import com.business.ecommrceapp.paging.ProductsPageSource
+import com.business.ecommrceapp.util.DataFetchState
+import com.business.ecommrceapp.util.Info
+import com.business.ecommrceapp.models.CategoryItem
+import com.business.ecommrceapp.models.SubCategoryItem
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val apiService: ApiService):ViewModel() {

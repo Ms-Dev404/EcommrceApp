@@ -1,4 +1,4 @@
-package com.business.ecommrceapp
+package com.business.ecommrceapp.models
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
