@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_cat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#16000000"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ellipsize="end"
+        android:fontFamily="serif"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:singleLine="true"
+        android:text="Electronics"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</androidx.cardview.widget.CardView>
